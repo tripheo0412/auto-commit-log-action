@@ -8,6 +8,8 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Run jq
+        run: jq ".log.commiter += [\"${INPUT_COMMIT_USER_NAME}\"]" auto-log.json|sponge auto-log.json
       - name: Run auto log commiter action
         uses: ./ # Uses an action in the root directory
         with:
