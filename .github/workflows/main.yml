@@ -7,9 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-    #   - name: Dump GitHub context
-    #     env:
-    #       GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github.head_commit) }}
+        run: echo "$GITHUB_CONTEXT"
+       
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
