@@ -100,7 +100,7 @@ const exec = (cmd, args) => __awaiter(void 0, void 0, void 0, function* () {
     });
 });
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    yield exec('bash', [path_1.default.join(__dirname, './log-commit.sh')]);
+    yield exec('bash', [path_1.default.join(__dirname, '../log-commit.sh')]);
 });
 main().catch(err => {
     core.setFailed(err);
