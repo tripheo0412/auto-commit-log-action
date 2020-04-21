@@ -17,7 +17,7 @@ const exec = async (cmd: string, args: string[]): Promise<String> =>
   })
 
 const main = async (): Promise<void> => {
-  await exec('bash', [path.join(__dirname, './log-commit.sh')])
+  await exec('bash', [path.join(__dirname, '../log-commit.sh')])
 }
 
 main().catch(err => {
