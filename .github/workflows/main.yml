@@ -8,8 +8,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ fromJson(github) }} 
+        # env:
+        #   GITHUB_CONTEXT: ${{ fromJson(github) }} 
         run: echo $(${{ fromJson(github) }} | jq '.head_commit'   )
       - name: Install moreutils
         run: sudo apt-get install moreutils
