@@ -1,0 +1,50 @@
+name: 'Git auto commit log'
+description: 'Logging the commiter, their commit message and timestamp'
+author: 'Tri Hoang <tripheo0412@gmail.com>'
+inputs:
+  commit_message:
+    description: Commit message
+    required: true
+  branch:
+    description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
+    required: false
+    default: ''
+  commit_options:
+    description: Commit options (eg. --no-verify)
+    required: false
+  file_pattern:
+    description: File pattern used for `git add`. For example `src/\*.js`
+    required: false
+    default: '.'
+  repository:
+    description: Local file path to the git repository. Defaults to the current directory (`.`)
+    required: false
+    default: '.'
+  commit_user_name:
+    description: Name used for the commit user
+    required: false
+    default: Tripheo0412
+  commit_user_email:
+    description: Email address used for the commit user
+    required: false
+    default: tripheo0412@gmail.com
+  commit_author:
+    description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
+    required: false
+    default: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+  tagging_message:
+    description: Message used to create a new git tag with the commit. Keep this empty, if no tag should be created.
+    required: false
+    default: ''
+
+outputs:
+  changes_detected:
+    description: Value is "true", if the repository was dirty and file changes have been detected. Value is "false", if no changes have been detected.
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'git-commit'
+  color: orange
