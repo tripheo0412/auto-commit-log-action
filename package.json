@@ -24,8 +24,7 @@
   "author": "Tri Hoang <tripheo0412@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@actions/github": "^2.1.1"
+    "@actions/core": "^1.2.3"
   },
   "devDependencies": {
     "@types/jest": "^24.9.1",
