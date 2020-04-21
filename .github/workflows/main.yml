@@ -9,6 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run jq
+        run: sudo apt-get install moreutils
+      - name: Run auto log commiter action  
+      - name: Run jq
         run: jq ".log.commiter += [\"${INPUT_COMMIT_USER_NAME}\"]" auto-log.json|sponge auto-log.json
       - name: Run auto log commiter action
         uses: ./ # Uses an action in the root directory
