@@ -10,7 +10,7 @@ jobs:
       - name: Dump GitHub context
         # env:
         #   GITHUB_CONTEXT: ${{ fromJson(github) }} 
-        run: echo $(${{ fromJson(github) }} | jq '.head_commit'   )
+        run:  jq '.head_commit' ${{ fromJson(github) }}
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
