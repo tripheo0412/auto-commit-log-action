@@ -5,7 +5,7 @@ inputs:
   commit_message:
     description: Commit message
     required: false
-    default: ${{ github.head_commit.message }}
+    default: ${{ fromJson(github.head_commit.message) }}
   branch:
     description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
     required: false
@@ -24,11 +24,11 @@ inputs:
   commit_user_name:
     description: Name used for the commit user
     required: false
-    default: ${{ github.head_commit.committer.username }}
+    default: ${{ fromJson(github.head_commit.committer.username) }}
   commit_user_email:
     description: Email address used for the commit user
     required: false
-    default: ${{ github.head_commit.committer.email }}
+    default: ${{ fromJson(github.head_commit.committer.email) }}
   commit_author:
     description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
     required: false
