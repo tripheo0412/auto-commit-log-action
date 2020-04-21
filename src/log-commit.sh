@@ -3,7 +3,7 @@
 set -eu
 
 _main() {
-    # _auto_log
+    _auto_log
 
     _switch_to_repository
 
@@ -21,10 +21,10 @@ _main() {
     
 }
 
-# _auto_log() {
-#     message=$(jq ".log.commiter += [\"${INPUT_COMMIT_USER_NAME}\"]" auto-log.json|sponge auto-log.json)
-#     echo "${message}"
-# }
+_auto_log() {
+    message=$(jq ".log.commiter += [\"${INPUT_COMMIT_USER_NAME}\"]" auto-log.json|sponge auto-log.json)
+    echo "${message}"
+}
 
 _switch_to_repository() {
     echo "INPUT_REPOSITORY value: $INPUT_REPOSITORY";
