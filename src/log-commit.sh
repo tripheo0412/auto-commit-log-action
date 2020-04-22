@@ -21,7 +21,7 @@ _main() {
 
 _auto_log() {
     now=$(date +"%T")
-    message=$(jq ".log.history += [\"[${INPUT_COMMIT_USER_NAME}][${now}] ${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
+    message=$(jq ".log.history += [\"${INPUT_COMMIT_USER_NAME}===${now}===${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
     echo "${message}"
 }
 

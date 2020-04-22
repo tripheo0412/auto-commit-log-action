@@ -34,11 +34,11 @@ inputs:
   commit_user_name:
     description: Name used for the commit user
     required: false
-    default: ''
+    default: ${{ github.event.head_commit.committer.username }}
   commit_user_email:
     description: Email address used for the commit user
     required: false
-    default: ''
+    default: ${{ github.event.head_commit.committer.email }}
   tagging_message:
     description: Message used to create a new git tag with the commit. Keep this empty, if no tag should be created.
     required: false
