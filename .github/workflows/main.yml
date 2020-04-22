@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Dump Data
         env:
-            DATA: ${{ toJson(github.event) }}
+            DATA: ${{ toJson(github.event.head_commit.message) }}
         run: echo ${DATA}
       - name: Install moreutils
         run: sudo apt-get install moreutils
