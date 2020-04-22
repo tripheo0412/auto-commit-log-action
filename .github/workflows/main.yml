@@ -12,7 +12,7 @@ jobs:
       - name: Run auto log commiter action
         uses: ./
         with:
-            commit_message: ${{ toJson(github.event.head_commit.author.username) }} ${{ github.event.head_commit.message }}
+            # commit_message: ${{ github.event.head_commit.author.username }} ${{ github.event.head_commit.message }}
             branch: ${{ github.head_ref }}
             bot_user_name: Tripheo0412
             bot_user_email: tripheo0412@gmail.com
