@@ -22,7 +22,7 @@ Add the following step at the end of your job.
 - name: Install moreutils
   run: sudo apt-get install moreutils
 - name: Run auto log commiter action  
-  uses: tripheo0412/auto-commit-log-action@v2.0.0
+  uses: tripheo0412/auto-commit-log-action@v2.0.2
   with:
     # Optional name of the branch the commit should be pushed to
     # Required if Action is used in Workflow listening to the `pull_request` event
