@@ -8,9 +8,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Dump Data
-        run: |
-            DATA = ${{ toJson(github) }}
-            echo $DATA
+        env:
+            DATA: ${{ github.head_commit.id }}
+        run: echo ${DATA}
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
