@@ -26,13 +26,12 @@ _check_for_json_log() {
         echo "$FILE exist"
     else 
         echo "$FILE does not exist, creating new auto-log.json"
-        echo $(jq -n '{log:{history: $ARGS.positional}}' --args auto-log-action-create-file > auto-log.json)
+        echo $(jq -n --args 1 '{log:{history: $ARGS.positional}}'  > auto-log.json)
     fi
 }
 
 _auto_log() {
     now=$(date)
-    message=
     message=$(jq ".log.history += [\"[${now}]${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
     echo "${message}"
 }
