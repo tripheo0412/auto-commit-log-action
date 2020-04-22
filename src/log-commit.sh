@@ -3,6 +3,8 @@
 set -eu
 
 _main() {
+    _check_for_json_log
+
     _auto_log
 
     _switch_to_repository
@@ -17,6 +19,14 @@ _main() {
 
     _push_to_github
     
+}
+_check_for_json_log() {
+    FILE=/auto-log.json
+    if [ -f "$FILE" ]; then
+        echo "$FILE exist"
+    else 
+        echo "$FILE does not exist"
+    fi
 }
 
 _auto_log() {
