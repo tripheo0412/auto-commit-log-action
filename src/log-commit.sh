@@ -20,7 +20,7 @@ _main() {
 }
 
 _auto_log() {
-    message=$(jq ".log.commiter += [\"${INPUT_COMMIT_USER_NAME}\"]" auto-log.json|sponge auto-log.json)
+    message=$(jq ".log.commiter += [\"\[${INPUT_COMMIT_USER_NAME}\] ${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
     echo "${message}"
 }
 
@@ -43,7 +43,7 @@ _add_files() {
 
 _local_commit() {
     echo "INPUT_COMMIT_OPTIONS: ${INPUT_COMMIT_OPTIONS}"
-    git -c user.name="$INPUT_COMMIT_USER_NAME" -c user.email="$INPUT_COMMIT_USER_EMAIL" commit -m "$INPUT_COMMIT_MESSAGE" --author="$INPUT_COMMIT_AUTHOR" ${INPUT_COMMIT_OPTIONS:+"$INPUT_COMMIT_OPTIONS"}
+    git -c user.name="$INPUT_BOT_USER_NAME" -c user.email="$INPUT_BOT_USER_EMAIL" commit -m "$INPUT_COMMIT_MESSAGE" --author="$INPUT_BOT_AUTHOR" ${INPUT_COMMIT_OPTIONS:+"$INPUT_COMMIT_OPTIONS"}
 }
 
 _tag_commit() {

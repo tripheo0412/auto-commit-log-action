@@ -21,26 +21,28 @@ inputs:
     description: Local file path to the git repository. Defaults to the current directory (`.`)
     required: false
     default: '.'
-  commit_user_name:
+  bot_user_name:
     description: Name used for the commit user
-    required: false
-    default: 'Tripheo0412'
-  commit_user_email:
+    required: true
+  bot_user_email:
     description: Email address used for the commit user
-    required: false
-    default: 'tripheo0412@gmail.com'
-  commit_author:
+    required: true
+  bot_author:
     description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
     required: false
     default: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+  commit_user_name:
+    description: Name used for the commit user
+    required: false
+    default: ''
+  commit_user_email:
+    description: Email address used for the commit user
+    required: false
+    default: ''
   tagging_message:
     description: Message used to create a new git tag with the commit. Keep this empty, if no tag should be created.
     required: false
     default: ''
-
-outputs:
-  changes_detected:
-    description: Value is "true", if the repository was dirty and file changes have been detected. Value is "false", if no changes have been detected.
 
 runs:
   using: 'node12'
