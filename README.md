@@ -1,6 +1,7 @@
 # auto-commit-log-action
 
-This GitHub Action automatically commits auto-log.json files which have been changed during a Workflow run and pushes the commit back to GitHub.
+This GitHub Action automatically log new commit to auto-log.json during a Workflow run and pushes the commit back to GitHub.
+If auto-log.json is not existed, the action will auto create this one.
 The default committer is "GitHub Actions <actions@github.com>" and the default author of the commit is "Your GitHub Username <github_username@users.noreply.github.com>".
 
 *This Action currently can't be used in conjunction with pull requests of forks. See [here](https://github.com/tripheo0412/auto-commit-log-action/issues/25) or [here](https://github.community/t5/GitHub-Actions/Actions-not-working-correctly-for-forks/td-p/35545) for more information.*
