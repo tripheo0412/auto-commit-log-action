@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Dump Data
         env:
-          DATA: ${{ github.event }}
+            DATA: ${{ github.event }}
         run: echo ${DATA}
       - name: Show Popularity
         run: |
