@@ -15,5 +15,5 @@ jobs:
             COMMIT_AUTHOR: ${{ toJson(github.event.head_commit.committer.username) }}
         uses: ./
         with:
-            commit_message: ${{ github.event.head_commit.message }}
+            commit_message: ${{ toJson(github.event.head_commit.committer.username) }} ${{ github.event.head_commit.message }}
             branch: ${{ github.head_ref }}
