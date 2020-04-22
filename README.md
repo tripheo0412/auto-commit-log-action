@@ -1,5 +1,8 @@
 # auto-commit-log-action
-This action inspired from [stefanzweifel](https://github.com/stefanzweifel/git-auto-commit-action), all credits to him. This action is customized and published only for private usage.
+This action inspired from [stefanzweifel](https://github.com/stefanzweifel/git-auto-commit-action), all credits to him. 
+
+This action is customized and published only for private usage.
+
 This GitHub Action automatically log new commit to auto-log.json during a Workflow run and pushes the commit back to GitHub.
 If auto-log.json is not existed, the action will auto create this one.
 The default committer is "GitHub Actions <actions@github.com>" and the default author of the commit is "Your GitHub Username <github_username@users.noreply.github.com>".
