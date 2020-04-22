@@ -26,7 +26,7 @@ _check_for_json_log() {
         echo "$FILE exist"
     else 
         echo "$FILE does not exist, creating new auto-log.json"
-        echo $(jq -R '.' auto-log.json | jq -s '{log:{history:map(\"Auto log action create auto-log.json\")}}')
+        echo $(jq -R '.' auto-log.json | jq -s '{log:{history:map("Auto log action create auto-log.json")}}')
     fi
 }
 
