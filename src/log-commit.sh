@@ -32,7 +32,7 @@ _check_for_json_log() {
 
 _auto_log() {
     now=$(date)
-    message=$(jq ".log.history += [\"[${now}]${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
+    message=$(jq ".log.history += [\"[${now}] ${INPUT_COMMIT_MESSAGE}\"]" auto-log.json|sponge auto-log.json)
     echo "${message}"
 }
 
