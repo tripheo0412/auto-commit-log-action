@@ -21,7 +21,7 @@ _main() {
     
 }
 _check_for_json_log() {
-    FILE=/auto-log.json
+    FILE=./auto-log.json
     if [ -f "$FILE" ]; then
         echo "$FILE exist"
     else 
