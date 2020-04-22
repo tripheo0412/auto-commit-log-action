@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Dump Data
         env:
-            DATA: ${{ github.head_commit.id }}
+            DATA: ${{ github.repository }}
         run: echo ${DATA}
       - name: Install moreutils
         run: sudo apt-get install moreutils
