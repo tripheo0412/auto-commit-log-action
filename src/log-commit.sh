@@ -26,7 +26,7 @@ _check_for_json_log() {
         echo "$FILE exist"
     else 
         echo "$FILE does not exist, creating new auto-log.json"
-        echo $(jq -n --args 1 '{log:{history: $ARGS.positional}}'  > auto-log.json)
+        echo $(jq -n --args 1 '{log: {history: [Auto log action create auto-log.json]} }'  > auto-log.json)
     fi
 }
 
