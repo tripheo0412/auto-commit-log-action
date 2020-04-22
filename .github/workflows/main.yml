@@ -7,14 +7,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dump Data
-        env:
-            DATA: ${{ toJson(github.event.head_commit.message) }}
-        run: echo ${DATA}
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
+        env:
+            COMMIT_MESSAGE: ${{ toJson(github.event.head_commit.message) }}
+            COMMIT_AUTHOR: ${{ toJson(github.event.head_commit.committer.username) }}
         uses: ./
         with:
-            commit_message: ${{ steps.hello.outputs.time }}
+            commit_message: ${{ github.event.head_commit.message }}
             branch: ${{ github.head_ref }}
