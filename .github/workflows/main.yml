@@ -7,18 +7,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dump GitHub context
-        # env:
-        #   GITHUB_CONTEXT: ${{ fromJson(github) }} 
-        run:  jq '.head_commit' ${{ fromJson(github) }}
+      - name: Dump Data
+        run: echo ${{ toJson(github) }}
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
         uses: ./
         with:
-            commit_user_name: ${{ github.head_commit.committer.username }}
-            commit_user_email: ${{ github.head_commit.committer.email }}
-            commit_message: Auto log commiter
+            commit_message: ${{ steps.hello.outputs.time }}
             branch: ${{ github.head_ref }}
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
