@@ -4,23 +4,23 @@ set -eu
 
 _main() {
     _debugging
-    _check_for_json_log
+    # _check_for_json_log
 
-    _auto_log
+    # _auto_log
 
-    _switch_to_repository
+    # _switch_to_repository
 
     
 
-    _switch_to_branch
+    # _switch_to_branch
 
-    _add_files
+    # _add_files
 
-    _local_commit
+    # _local_commit
 
-    _tag_commit
+    # _tag_commit
 
-    _push_to_github
+    # _push_to_github
     
 }
 _debugging() {
