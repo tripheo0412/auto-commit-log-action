@@ -45,7 +45,7 @@ _switch_to_branch() {
     echo "INPUT_BRANCH value: $INPUT_BRANCH";
 
     # Switch to branch from current Workflow run
-    git checkout origin $INPUT_BRANCH
+    git checkout  refs/remotes/origin/$INPUT_BRANCH
 }
 
 _add_files() {
