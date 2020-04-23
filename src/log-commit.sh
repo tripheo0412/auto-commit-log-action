@@ -24,6 +24,7 @@ _main() {
     
 }
 _debugging() {
+    git branch
     git status
 }
 _check_for_json_log() {
