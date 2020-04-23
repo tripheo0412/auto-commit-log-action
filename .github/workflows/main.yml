@@ -11,7 +11,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Github Context
         env:
-          GITHUBCONTEXT: {{ toJson(github) }}
+          GITHUBCONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUBCONTEXT"
       - name: Install moreutils
         run: sudo apt-get install moreutils
