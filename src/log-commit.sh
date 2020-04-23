@@ -3,29 +3,22 @@
 set -eu
 
 _main() {
-    _debugging
     _check_for_json_log
 
     _auto_log
 
-    # _switch_to_repository
+    _switch_to_repository
 
+    _switch_to_branch
+
+    _add_files
+
+    _local_commit
+
+    _tag_commit
+
+    _push_to_github
     
-
-    # _switch_to_branch
-
-    # _add_files
-
-    # _local_commit
-
-    # _tag_commit
-
-    # _push_to_github
-    
-}
-_debugging() {
-    git branch
-    git status
 }
 _check_for_json_log() {
     FILE=./auto-log.json
