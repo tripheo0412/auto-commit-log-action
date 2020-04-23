@@ -1,7 +1,8 @@
 {
   "log": {
     "history": [
-      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2"
+      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2",
+      "[Thu Apr 23 21:00:04 UTC 2020] <TriggerCI> tripheo0412: trigger ci"
     ]
   }
 }
