@@ -1,4 +1,4 @@
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   test-my-action:
@@ -14,10 +14,7 @@ jobs:
       - name: Run auto log commiter action
         uses: ./
         with:
-          branch: ${{ github.head_ref }}
-          bot_user_name: Tripheo0412
-          bot_user_email: tripheo0412@gmail.com
-      - uses: stefanzweifel/git-auto-commit-action@v4.1.5
-        with:
-          commit_message: Apply php-cs-fixer changes
-          branch: ${{ github.head_ref }}
+            branch: ${{ github.head_ref }}
+            bot_user_name: Tripheo0412
+            bot_user_email: tripheo0412@gmail.com
+      
