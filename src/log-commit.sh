@@ -9,6 +9,8 @@ _main() {
 
     _switch_to_repository
 
+    _debugging
+
     _switch_to_branch
 
     _add_files
@@ -19,6 +21,9 @@ _main() {
 
     _push_to_github
     
+}
+_debugging() {
+    git status
 }
 _check_for_json_log() {
     FILE=./auto-log.json
