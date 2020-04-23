@@ -4,9 +4,9 @@ set -eu
 
 _main() {
     _debugging
-    # _check_for_json_log
+    _check_for_json_log
 
-    # _auto_log
+    _auto_log
 
     # _switch_to_repository
 
