@@ -1,4 +1,4 @@
-on: [push]
+on: [pull_request]
 
 jobs:
   test-my-action:
@@ -7,6 +7,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Github Context
+        env:
+          GITHUBCONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUBCONTEXT"
       - name: Install moreutils
         run: sudo apt-get install moreutils
       - name: Run auto log commiter action
@@ -15,3 +21,4 @@ jobs:
             branch: ${{ github.head_ref }}
             bot_user_name: Tripheo0412
             bot_user_email: tripheo0412@gmail.com
+      
