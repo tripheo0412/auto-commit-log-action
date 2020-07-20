@@ -1,7 +1,8 @@
 {
   "log": {
     "history": [
-      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2"
+      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2",
+      "[Mon Jul 20 10:14:11 UTC 2020] <TriggerCI> dependabot[bot]: Bump lodash from 4.17.15 to 4.17.19\n\nBumps [lodash](https://github.com/lodash/lodash) from 4.17.15 to 4.17.19.\n- [Release notes](https://github.com/lodash/lodash/releases)\n- [Commits](https://github.com/lodash/lodash/compare/4.17.15...4.17.19)\n\nSigned-off-by: dependabot[bot] <support@github.com>"
     ]
   }
 }
