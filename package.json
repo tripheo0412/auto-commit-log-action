@@ -23,7 +23,7 @@
   "author": "Tri Hoang <tripheo0412@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3"
+    "@actions/core": "^1.2.6"
   },
   "devDependencies": {
     "@types/jest": "^24.9.1",
