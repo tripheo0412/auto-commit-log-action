@@ -1,7 +1,8 @@
 {
   "log": {
     "history": [
-      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2"
+      "[Wed Apr 22 11:09:17 UTC 2020] <TriggerCI> tripheo0412: release version 2.0.2",
+      "[Thu Oct  1 17:41:22 UTC 2020] <TriggerCI> dependabot[bot]: Bump @actions/core from 1.2.3 to 1.2.6\n\nBumps [@actions/core](https://github.com/actions/toolkit/tree/HEAD/packages/core) from 1.2.3 to 1.2.6.\n- [Release notes](https://github.com/actions/toolkit/releases)\n- [Changelog](https://github.com/actions/toolkit/blob/main/packages/core/RELEASES.md)\n- [Commits](https://github.com/actions/toolkit/commits/HEAD/packages/core)\n\nSigned-off-by: dependabot[bot] <support@github.com>"
     ]
   }
 }
